@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LunarZodiac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPU-uh-4xe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="1bY-d9-woo">
+                                        <rect key="frame" x="6" y="186" width="308" height="340"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="308" id="D1d-U8-ylJ"/>
+                                            <constraint firstAttribute="height" constant="340" id="w0i-i0-mQR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Year Is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqk-N3-2aL">
+                                        <rect key="frame" x="50" y="42" width="220" height="37"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="34"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-Mw-68A">
+                                        <rect key="frame" x="255" y="127" width="30" height="30"/>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="nextYearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NuB-zo-KSG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czX-Xc-HZm">
+                                        <rect key="frame" x="35" y="127" width="30" height="30"/>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="thisYearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDL-6L-gze"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-Ga-IlV">
+                                        <rect key="frame" x="121" y="124" width="78" height="37"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="34"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="5rQ-Ga-IlV" firstAttribute="top" secondItem="Gqk-N3-2aL" secondAttribute="bottom" constant="45" id="2kD-YA-3Xg"/>
+                                    <constraint firstItem="Gqk-N3-2aL" firstAttribute="centerX" secondItem="5rQ-Ga-IlV" secondAttribute="centerX" id="4LE-0t-QWp"/>
+                                    <constraint firstItem="Gqk-N3-2aL" firstAttribute="centerX" secondItem="1bY-d9-woo" secondAttribute="centerX" id="7ku-U6-MxQ"/>
+                                    <constraint firstItem="BZe-Mw-68A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="czX-Xc-HZm" secondAttribute="trailing" constant="8" symbolic="YES" id="Ep0-ph-EY7"/>
+                                    <constraint firstItem="czX-Xc-HZm" firstAttribute="leading" secondItem="aPU-uh-4xe" secondAttribute="leading" constant="35" id="JZp-JL-bAX"/>
+                                    <constraint firstAttribute="trailing" secondItem="BZe-Mw-68A" secondAttribute="trailing" constant="35" id="MfX-tr-iQ1"/>
+                                    <constraint firstItem="Gqk-N3-2aL" firstAttribute="leading" secondItem="aPU-uh-4xe" secondAttribute="leading" constant="50" id="QML-KF-1xk"/>
+                                    <constraint firstItem="1bY-d9-woo" firstAttribute="top" secondItem="czX-Xc-HZm" secondAttribute="bottom" constant="29" id="ZOT-tI-qSJ"/>
+                                    <constraint firstItem="BZe-Mw-68A" firstAttribute="top" secondItem="Gqk-N3-2aL" secondAttribute="bottom" constant="48" id="ZZA-1f-srf"/>
+                                    <constraint firstItem="1bY-d9-woo" firstAttribute="leading" secondItem="aPU-uh-4xe" secondAttribute="leading" constant="6" id="g9O-wi-zVJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="1bY-d9-woo" secondAttribute="trailing" constant="6" id="kjk-s4-ags"/>
+                                    <constraint firstItem="czX-Xc-HZm" firstAttribute="top" secondItem="Gqk-N3-2aL" secondAttribute="bottom" constant="48" id="sWe-Pv-xmV"/>
+                                    <constraint firstAttribute="bottom" secondItem="1bY-d9-woo" secondAttribute="bottom" constant="42" id="tb2-js-9gX"/>
+                                    <constraint firstItem="1bY-d9-woo" firstAttribute="top" secondItem="BZe-Mw-68A" secondAttribute="bottom" constant="29" id="vKB-6e-ORn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aPU-uh-4xe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1Pz-vh-R0O"/>
+                            <constraint firstItem="aPU-uh-4xe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3ZB-bE-08c"/>
+                            <constraint firstItem="aPU-uh-4xe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hzj-9l-CDD"/>
+                            <constraint firstItem="aPU-uh-4xe" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mvu-8i-o94"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="yearImages" destination="1bY-d9-woo" id="KUf-Ao-PfX"/>
+                        <outlet property="yearLabel" destination="5rQ-Ga-IlV" id="DUN-VN-tcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.75" y="109.85915492957747"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image0" width="385" height="526"/>
+    </resources>
+</document>

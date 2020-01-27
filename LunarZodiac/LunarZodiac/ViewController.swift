@@ -16,17 +16,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    @IBAction func nextYearButtonPressed(_ sender: UIButton) {
+    @IBAction func nextYearButtonPressed(_ sender: UIButton) { if sender.tag == 1 {
         startingYear += 1
         yearLabel.text = String(startingYear)
         yearImages.image = UIImage(named: "image\((startingYear-4)%12)")
-    }
-    @IBAction func thisYearButtonPressed(_ sender: UIButton) {
+    } else if sender.tag == 0 {
         startingYear -= 1
         yearLabel.text = String(startingYear)
         yearImages.image = UIImage(named: "image\((startingYear-4)%12)")
     }
-    
+    }
 
 }
 

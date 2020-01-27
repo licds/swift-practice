@@ -31,7 +31,7 @@
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-Mw-68A">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-Mw-68A">
                                         <rect key="frame" x="255" y="127" width="30" height="30"/>
                                         <state key="normal" title="&gt;"/>
                                         <connections>
@@ -42,7 +42,7 @@
                                         <rect key="frame" x="35" y="127" width="30" height="30"/>
                                         <state key="normal" title="&lt;"/>
                                         <connections>
-                                            <action selector="thisYearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDL-6L-gze"/>
+                                            <action selector="nextYearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPA-OF-tsx"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-Ga-IlV">

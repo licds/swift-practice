@@ -18,35 +18,35 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="HSc-5X-mTK">
                                 <rect key="frame" x="20" y="70" width="374" height="470"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HvA-rG-IlB">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="352"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9e-Lm-Kr0">
-                                        <rect key="frame" x="66.5" y="374" width="241" height="33"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" title="Answer my 'Yes' / 'No' Question"/>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="HvA-rG-IlB">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="470"/>
+                                        <gestureRecognizers/>
                                         <connections>
-                                            <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nkM-Lc-WJM"/>
+                                            <outletCollection property="gestureRecognizers" destination="KMH-C5-NEC" appends="YES" id="fwC-Xk-gBb"/>
                                         </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chw-yq-jMF">
-                                        <rect key="frame" x="142.5" y="429" width="89" height="41"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="HvA-rG-IlB" firstAttribute="leading" secondItem="HSc-5X-mTK" secondAttribute="leadingMargin" id="qAh-RV-li0"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chw-yq-jMF">
+                                <rect key="frame" x="20" y="514" width="374" height="348"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="chw-yq-jMF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="470" id="FsB-H9-Oyh"/>
                             <constraint firstItem="HSc-5X-mTK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Jap-jh-vxh"/>
+                            <constraint firstItem="chw-yq-jMF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YuE-C2-X4p"/>
+                            <constraint firstItem="chw-yq-jMF" firstAttribute="trailing" secondItem="HSc-5X-mTK" secondAttribute="trailing" id="ZzC-n9-t0c"/>
                             <constraint firstItem="HSc-5X-mTK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="26" id="doT-t4-son"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HSc-5X-mTK" secondAttribute="bottom" constant="322" id="o1y-6V-ot7"/>
                             <constraint firstItem="HSc-5X-mTK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tqA-JB-1He"/>
+                            <constraint firstItem="chw-yq-jMF" firstAttribute="leading" secondItem="HSc-5X-mTK" secondAttribute="leading" id="zMm-13-83S"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -56,8 +56,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="KMH-C5-NEC">
+                    <connections>
+                        <action selector="imagePressed:" destination="BYZ-38-t0r" id="uGg-1w-sAI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="512" height="512"/>
+    </resources>
 </document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="McConaughey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mattm" translatesAutoresizingMaskIntoConstraints="NO" id="gDK-kt-wSm">
+                                <rect key="frame" x="20" y="82" width="374" height="259"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How alright is Matthew?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyy-pw-Cro">
+                                <rect key="frame" x="78" y="327" width="258" height="25.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbA-QY-BZK">
+                                <rect key="frame" x="201.5" y="410" width="11.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ta7-pC-ZsT">
+                                <rect key="frame" x="160" y="448" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="u7A-yy-1mf"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPd-5s-Cdp">
+                                <rect key="frame" x="78" y="523" width="258" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Tell Me"/>
+                                <connections>
+                                    <action selector="tellMeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zf8-Ia-RLZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uPd-5s-Cdp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="0ae-7b-r0q"/>
+                            <constraint firstItem="Fyy-pw-Cro" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4N5-gk-Ye6"/>
+                            <constraint firstItem="Fyy-pw-Cro" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="78" id="8IE-nq-mjP"/>
+                            <constraint firstAttribute="bottom" secondItem="Ta7-pC-ZsT" secondAttribute="bottom" constant="416" id="AXm-4q-xJA"/>
+                            <constraint firstItem="Ta7-pC-ZsT" firstAttribute="centerX" secondItem="uPd-5s-Cdp" secondAttribute="centerX" id="Js9-ov-hYX"/>
+                            <constraint firstItem="uPd-5s-Cdp" firstAttribute="top" secondItem="Ta7-pC-ZsT" secondAttribute="bottom" constant="43" id="K6z-V5-KR5"/>
+                            <constraint firstItem="Ta7-pC-ZsT" firstAttribute="top" secondItem="TbA-QY-BZK" secondAttribute="bottom" constant="8" id="MZD-bB-QQj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDK-kt-wSm" secondAttribute="bottom" constant="521" id="QVo-RB-LVx"/>
+                            <constraint firstItem="Fyy-pw-Cro" firstAttribute="centerX" secondItem="gDK-kt-wSm" secondAttribute="centerX" id="RJq-wy-ebq"/>
+                            <constraint firstItem="Ta7-pC-ZsT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="RzN-sU-sHi"/>
+                            <constraint firstItem="Fyy-pw-Cro" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="283" id="YpP-Gb-3ob"/>
+                            <constraint firstItem="Ta7-pC-ZsT" firstAttribute="centerX" secondItem="TbA-QY-BZK" secondAttribute="centerX" id="dwo-W0-Gj3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uPd-5s-Cdp" secondAttribute="trailing" id="hj5-uO-hJB"/>
+                            <constraint firstItem="gDK-kt-wSm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hww-6p-kle"/>
+                            <constraint firstItem="gDK-kt-wSm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="38" id="sL9-92-2TP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="alrightLabel" destination="TbA-QY-BZK" id="i4R-kc-mpF"/>
+                        <outlet property="stepper" destination="Ta7-pC-ZsT" id="xsU-zR-bga"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mattm" width="300" height="168"/>
+    </resources>
+</document>

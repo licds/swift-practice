@@ -55,13 +55,12 @@ class ViewController: UIViewController {
             lowerName.text = "You R genius, got the secret code!"
             upperName.textColor = UIColor.white
             lowerName.textColor = UIColor.white
+            number = 0
         } else {
             upperName.text = ""
             lowerName.text = ""
+            number = 0
         }
     }
-    
-
-    
 }
 
